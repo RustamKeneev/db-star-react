@@ -32,11 +32,15 @@ export default class ItemList extends Component {
     }
 
     render() {
+
         const { peopleList } = this.state;
+
         if (!peopleList) {
             return <Spinner />;
         }
+
         const items = this.renderItems(peopleList);
+
         return (
             <ul className="item-list list-group">
                 {items}
